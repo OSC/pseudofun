@@ -42,8 +42,8 @@ end
 
 
 gem 'autoprefixer-rails'
-gem 'bootstrap-sass', '~> 3.3'
-gem 'bootstrap_form', '~> 2.5'
+gem 'bootstrap'
+gem 'bootstrap_form'
 gem 'font-awesome-sass', '~> 4.6'
 gem 'dotenv-rails', '~> 2.1'
 gem 'paperclip', '~> 4.3'
