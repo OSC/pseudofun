@@ -31,3 +31,6 @@
 
 # Do not version the dependencies
 /vendor/bundle
+
+# Keep track of changes in ood_appkit to make Bootstrap 4 work
+!/vendor/bundle/ruby/2.4.0/gems/ood_appkit-0.3.6
