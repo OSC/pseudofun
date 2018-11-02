@@ -30,7 +30,13 @@
 /wiki
 
 # Do not version the dependencies
-/vendor/bundle
+/vendor/bundle/ruby/2.4.0/bin
+/vendor/bundle/ruby/2.4.0/build_info
+/vendor/bundle/ruby/2.4.0/cache
+/vendor/bundle/ruby/2.4.0/doc
+/vendor/bundle/ruby/2.4.0/gems/*
+/vendor/bundle/ruby/2.4.0/extensions
+/vendor/bundle/ruby/2.4.0/specifications
 
 # Keep track of changes in ood_appkit to make Bootstrap 4 work
 !/vendor/bundle/ruby/2.4.0/gems/ood_appkit-0.3.6
