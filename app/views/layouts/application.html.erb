@@ -19,44 +19,41 @@
 
 <header>
   <!-- navbar  -->
-  <nav class="ood-appkit navbar navbar-inverse navbar-static-top" role="navigation">
+  <nav class="ood-appkit navbar navbar-dark navbar-expand-md bg-dark" role="navigation">
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-
+      <div class="navbar-brand">
         <ul class="navbar-breadcrumbs">
-          <li><%= link_to OodAppkit.dashboard.title, OodAppkit.dashboard.url.to_s %></li>
-          <li><%= link_to Rails.configuration.x.title, root_path %></li>
+          <li class="nav-item"><%= link_to OodAppkit.dashboard.title, OodAppkit.dashboard.url.to_s, class: 'nav-link' %></li>
+          <li class="nav-item"><%= link_to Rails.configuration.x.title, root_path, class: 'nav-link' %></li>
         </ul>
       </div>
+      
+      <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse navbar-responsive-collapse">
         <ul class="nav navbar-nav">
-          <li>
-            <%= link_to '<span class="glyphicon glyphicon-plus"></span> New Sequence Query'.html_safe, new_sequence_path %>
+          <li class="nav-item">
+            <%= link_to '<span class="fa fa-plus"></span> New Sequence Query'.html_safe, new_sequence_path, class: 'nav-link' %>
           </li>
-          <li>
-            <%= link_to '<span class="glyphicon glyphicon-plus"></span> New Gene Query'.html_safe, new_gene_path %>
+          <li class="nav-item">
+            <%= link_to '<span class="fa fa-plus"></span> New Gene Query'.html_safe, new_gene_path, class: 'nav-link' %>
           </li>
         </ul>
-        <ul class="nav navbar-nav navbar-right">
+        <ul class="nav navbar-nav ml-auto">
           <% if OodAppkit.routes.wiki && File.exist?(File.join('wiki/Home.md')) %>
-          <li>
+          <li class="nav-item">
             <%= link_to "Documentation", wiki_path('Home') %>
           </li>
           <% end %>
-          <li>
-            <p class="navbar-text">Logged in as <%= OodSupport::User.new.name %></p>
+          <li class="nav-item">
+            <span class="navbar-text">Logged in as <%= OodSupport::User.new.name %></span>
           </li>
-          <li>
-            <%= link_to "About", about_path %>
+          <li class="nav-item">
+            <%= link_to "About", about_path, class: 'nav-link' %>
           </li>
         </ul>
       </div><!-- /.navbar-collapse -->
@@ -94,7 +91,7 @@
 <footer class="footer navbar-bottom" style="background-color: white; border-top: 1px solid grey; margin-top: 40px;">
   <div class="container">
     <div class="row">
-      <div class="col-md-offset-9 col-md-3 col-sm-3">
+      <div class="offset-md-9 col-md-3 col-sm-3">
         <h5 id="app_version" class="pull-right">Version: <%= ENV['APP_VERSION'] %></h5>
       </div>
     </div>
