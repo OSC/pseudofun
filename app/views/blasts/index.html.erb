@@ -1,4 +1,4 @@
-<div class="mt-5 mb-2 border-bottom">
+<div class="mt-5 mb-3 border-bottom">
   <h2>Sequence and Gene Queries <small>Data loaded <span id="loaded_at"></span> (Reload the browser to see updated data)</small></h2>
   <p>
   PseudoFuN is a computational tool for studying potential functions of
@@ -59,15 +59,15 @@
             <td style="max-width: 200px; word-wrap: break-word;">N/A</td>
             <td><%= link_to 'Submit', submit_gene_path(blast), method: :put, class: 'btn btn-success btn-sm' unless blast.submitted? %></td>
             <td><%= link_to 'Show', gene_path(blast), class: 'btn btn-primary btn-sm' %></td>
-            <td><%= link_to 'Edit', edit_gene_path(blast), class: 'btn btn-default btn-sm' unless blast.submitted? %></td>
-            <td><%= link_to 'Copy', copy_gene_path(blast), method: :put, class: 'btn btn-default btn-sm' %></td>
+            <td><%= link_to 'Edit', edit_gene_path(blast), class: 'btn btn-light btn-sm' unless blast.submitted? %></td>
+            <td><%= link_to 'Copy', copy_gene_path(blast), method: :put, class: 'btn btn-light btn-sm' %></td>
             <td><%= link_to 'Destroy', gene_path(blast), method: :delete, class: 'btn btn-danger btn-sm', data: { confirm: 'Are you sure?' } %></td>
           <% else %>
             <td style="max-width: 200px; word-wrap: break-word;"><%= blast.sequence %></td>
             <td><%= link_to 'Submit', submit_sequence_path(blast), method: :put, class: 'btn btn-success btn-sm' unless blast.submitted? %></td>
             <td><%= link_to 'Show', sequence_path(blast), class: 'btn btn-primary btn-sm' %></td>
-            <td><%= link_to 'Edit', edit_sequence_path(blast), class: 'btn btn-default btn-sm' unless blast.submitted? %></td>
-            <td><%= link_to 'Copy', copy_sequence_path(blast), method: :put, class: 'btn btn-default btn-sm' %></td>
+            <td><%= link_to 'Edit', edit_sequence_path(blast), class: 'btn btn-light btn-sm' unless blast.submitted? %></td>
+            <td><%= link_to 'Copy', copy_sequence_path(blast), method: :put, class: 'btn btn-light btn-sm' %></td>
             <td><%= link_to 'Destroy', sequence_path(blast), method: :delete, class: 'btn btn-danger btn-sm', data: { confirm: 'Are you sure?' } %></td>
           <% end %>
         </tr>

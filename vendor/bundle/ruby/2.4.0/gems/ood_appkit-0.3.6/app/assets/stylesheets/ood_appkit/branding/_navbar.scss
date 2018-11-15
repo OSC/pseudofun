@@ -1,3 +1,17 @@
+.bg-inverse {
+  background-color: $bg-inverse-color;
+}
+
+.navbar-dark {
+  .navbar-text {
+    color: $navbar-dark-hover-color;
+  }
+}
+
+.navbar-text {
+  padding: $nav-link-padding-y;
+}
+
 %navbar-brand {
   float: left;
   padding: $navbar-padding-y $navbar-padding-x;
