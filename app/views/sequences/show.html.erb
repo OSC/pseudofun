@@ -71,7 +71,7 @@
   </script>
   <p>
     <strong>Graph Data:</strong>
-    <pre><%= JSON.pretty_generate(@blast.graph) %></pre>
+    <pre class="code"><%= JSON.pretty_generate(@blast.graph) %></pre>
   </p>
 <% elsif @blast.completed? %>
   <div class="alert alert-danger">Results data <%= "(#{@blast.outgraph_file.basename})" if @blast.outgraph_file %> not available. An error may have occurred.</div>
@@ -80,7 +80,7 @@
 <% if @blast.output %>
     <p>
       <strong>Output:</strong>
-    <pre><%= @blast.output %></pre>
+    <pre class="code"><%= @blast.output %></pre>
     </p>
 <% end %>
 
