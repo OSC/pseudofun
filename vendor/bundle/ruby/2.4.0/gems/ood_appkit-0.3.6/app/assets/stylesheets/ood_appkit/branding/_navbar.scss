@@ -12,22 +12,6 @@
   padding: $nav-link-padding-y;
 }
 
-%navbar-brand {
-  float: left;
-  padding: $navbar-padding-y $navbar-padding-x;
-  font-size: $font-size-lg;
-  line-height: $line-height-base;
-
-  &:hover,
-  &:focus {
-    text-decoration: none;
-  }
-
-  > img {
-    display: block;
-  }
-}
-
 .ood-appkit.navbar {
   ul.navbar-breadcrumbs {
     list-style-type: none;
@@ -44,12 +28,11 @@
       float: left;
 
       > a {
-        @extend %navbar-brand;
+        @extend .navbar-brand;
       }
 
       + li:before {
-        @extend %navbar-brand;
-        padding: $navbar-padding-y 0;
+        @extend .navbar-brand;
         content: '/';
       }
     }
