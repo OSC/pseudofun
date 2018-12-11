@@ -42,7 +42,7 @@ end
 
 
 gem 'autoprefixer-rails'
-gem 'bootstrap'
+gem 'bootstrap', '~> 4.0'
 gem 'bootstrap_form'
 gem 'font-awesome-sass', '~> 4.6'
 gem 'dotenv-rails', '~> 2.1'

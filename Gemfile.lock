@@ -215,7 +215,7 @@ PLATFORMS
 
 DEPENDENCIES
   autoprefixer-rails
-  bootstrap
+  bootstrap (~> 4.0)
   bootstrap_form
   byebug
   coffee-rails (~> 4.1.0)
