@@ -10,6 +10,9 @@ These three files contain domain specific code from the Zhang Lab of Computation
 - [query2tree.py](jobs/blast/query2tree.py)
 - [blasts.js](app/assets/javascripts/blasts.js)
 
+An open-source version of the application is available at:
+https://integrativeomics.shinyapps.io/pseudofun_app/
+
 See [full license text](LICENSE_CC_BY_4.0)
 
 ### The rest of the code is licensed using the MIT license:
