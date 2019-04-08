@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.10'
+gem 'rails', '5.0.0'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets
@@ -49,6 +49,9 @@ gem 'dotenv-rails', '~> 2.1'
 gem 'paperclip', '~> 4.3'
 gem 'jquery-datatables-rails', '~> 3.4'
 gem 'rails_12factor', group: :production
-gem 'osc_machete_rails', '~> 1.2'
+# gem 'osc_machete_rails', '~> 1.2'
+gem 'osc_machete_rails', git: 'https://github.com/OSC/osc_machete_rails.git', branch: 'rails5'
 gem 'ood_support', '~> 0.0.2'
-gem 'ood_appkit', '~> 0.3'
+# gem 'ood_appkit', '~> 0.3'
+gem 'ood_appkit', git: 'https://github.com/OSC/ood_appkit.git', branch: 'rails5'
+
