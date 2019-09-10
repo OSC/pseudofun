@@ -3,6 +3,11 @@
 %global repo_name pseudofun
 %global app_name pseudofun
 
+%{!?package_version: %define package_version %{major}.%{minor}.%{patch}}
+%{!?package_release: %define package_release 1}
+%{!?git_tag: %define git_tag v%{package_version}}
+%define git_tag_minus_v %(echo %{git_tag} | sed -r 's/^v//')
+
 # Work around issue with EL6 builds
 # https://stackoverflow.com/a/48801417
 %if 0%{?rhel} < 7
@@ -10,14 +15,14 @@
 %endif
 
 Name:     ondemand-%{app_name}
-Version:  0.2.1
-Release:  4%{?dist}
+Version:  %{package_version}
+Release:  %{package_release}%{?dist}
 Summary:  Pseudogene Functional Network
 
 Group:    System Environment/Daemons
 License:  MIT
 URL:      https://github.com/OSC/%{repo_name}
-Source0:  https://github.com/OSC/%{repo_name}/archive/v%{version}.tar.gz
+Source0:  https://github.com/OSC/%{repo_name}/archive/v%{git_tag}.tar.gz
 
 BuildRequires:  sqlite-devel curl make
 BuildRequires:  ondemand-runtime
