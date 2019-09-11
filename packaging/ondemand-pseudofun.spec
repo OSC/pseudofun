@@ -22,7 +22,7 @@ Summary:  Pseudogene Functional Network
 Group:    System Environment/Daemons
 License:  MIT
 URL:      https://github.com/OSC/%{repo_name}
-Source0:  https://github.com/OSC/%{repo_name}/archive/v%{git_tag}.tar.gz
+Source0:  https://github.com/OSC/%{repo_name}/archive/%{git_tag}.tar.gz
 
 BuildRequires:  sqlite-devel curl make
 BuildRequires:  ondemand-runtime
