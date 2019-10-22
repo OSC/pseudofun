@@ -8,6 +8,8 @@
 %{!?git_tag: %define git_tag v%{package_version}}
 %define git_tag_minus_v %(echo %{git_tag} | sed -r 's/^v//')
 
+%define __brp_mangle_shebangs /bin/true
+
 # Work around issue with EL6 builds
 # https://stackoverflow.com/a/48801417
 %if 0%{?rhel} < 7
@@ -28,7 +30,6 @@ BuildRequires:  sqlite-devel curl make
 BuildRequires:  ondemand-runtime
 BuildRequires:  ondemand-ruby
 BuildRequires:  ondemand-nodejs
-BuildRequires:  ondemand-git
 Requires:       ondemand
 
 # Disable automatic dependencies as it causes issues with bundled gems and
