@@ -24,11 +24,7 @@ class App
   end
 
   def bundler_args
-    if production?
-      args = "--without doc test development"
-    else
-      args = ""
-    end
+    args = production? ? "--without doc test development" : ""
     args
   end
 end
