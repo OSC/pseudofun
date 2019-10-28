@@ -22,6 +22,15 @@ class App
   def production?
     env == "production"
   end
+
+  def bundler_args
+    if production?
+      args = "--without doc test development"
+    else
+      args = ""
+    end
+    args
+  end
 end
 
 # set application settings
@@ -42,7 +51,7 @@ chdir APP_ROOT do
   puts "RAILS_RELATIVE_URL_ROOT = #{APP.url    || "not set"}"
 
   puts "\n== Installing dependencies =="
-  sh "bin/bundle check 1>/dev/null 2>&1 || bin/bundle install"
+  sh "bin/bundle check 1>/dev/null 2>&1 || bin/bundle install #{APP.bundler_args}"
 
   if APP.production?
     puts "\n== Compiling assets =="
