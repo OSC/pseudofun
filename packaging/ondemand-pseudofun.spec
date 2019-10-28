@@ -47,7 +47,6 @@ the Zhang Lab of Computational Genomics and Proteomics at OSU BMI.
 %build
 scl enable ondemand - << \EOS
 export PASSENGER_APP_ENV=production
-export PASSENGER_BASE_URI=/pun/sys/%{app_name}
 bin/setup
 EOS
 
