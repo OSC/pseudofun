@@ -99,7 +99,7 @@ GEM
     minitest (5.13.0)
     multi_json (1.13.1)
     mustache (1.1.0)
-    nokogiri (1.10.7)
+    nokogiri (1.10.8)
       mini_portile2 (~> 2.4.0)
     ood_appkit (1.0.3)
       addressable (~> 2.4)
